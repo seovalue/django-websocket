@@ -1,14 +1,49 @@
+{% load static %}
 <!-- chat/templates/chat/index.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Chat Rooms</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link  rel="stylesheet" href="{% static 'css/landing-page.css' %}">
+
+
 </head>
 <body>
-    What chat room would you like to enter?<br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
+    <!-- Navigation -->
+      <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Chatting Server</a>
+        </div>
+    </nav>
+
+    <!-- Masthead -->
+      <header class="masthead text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-9 mx-auto">
+              <h1 class="mb-5">What chat room <br> would you like to enter?</h1>
+            </div>
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+              <form>
+                <div class="form-row">
+                  <div class="col-12 col-md-9 mb-2 mb-md-0">
+                    <input id="room-name-input" type="text" class="form-control form-control-lg" placeholder="Enter the room name..">
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <input id = "room-name-submit" type="button" class="btn btn-block btn-lg btn-primary" value="Enter">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
 
     <script>
         document.querySelector('#room-name-input').focus();
