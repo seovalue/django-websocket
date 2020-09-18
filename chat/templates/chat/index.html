@@ -54,8 +54,9 @@
         };
 
         document.querySelector('#room-name-submit').onclick = function(e) {
-            var roomName = document.querySelector('#room-name-input').value;
-            window.location.pathname = '/chat/' + roomName + '/';
+            	var roomName = document.querySelector('#room-name-input').value;
+		console.log(roomName);
+		window.location.pathname = '/chat/' + roomName + '/';
         };
     </script>
 </body>
